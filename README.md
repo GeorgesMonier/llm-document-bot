@@ -4,12 +4,12 @@ A Python tool that extracts text from documents (PDF, Word, TXT), generates summ
 
 ## Features
 
-- 📄 Multi-format extraction: PDF, DOCX, TXT
-- 🤖 Local LLM summarization and Q&A via [Ollama](https://ollama.com) (llama3.2)
-- ⚡ Parallel document processing with PySpark
-- 📚 Automatic chunking (map-reduce) for long documents that exceed the model's context
-- 🛡️ Robust error handling — a corrupted file won't crash the whole batch
-- ✅ Unit tests with pytest
+-  Multi-format extraction: PDF, DOCX, TXT
+-  Local LLM summarization and Q&A via [Ollama](https://ollama.com) (llama3.2)
+- Parallel document processing with PySpark
+- Automatic chunking (map-reduce) for long documents that exceed the model's context
+- Robust error handling — a corrupted file won't crash the whole batch
+-  Unit tests with pytest
 
 ## How it works
 
@@ -64,4 +64,8 @@ pytest tests/ -v
 - Q&A retrieval for long documents uses simple keyword matching rather than semantic search. A natural next step would be embeddings + a vector store (e.g. ChromaDB) for true RAG-based retrieval.
 - Small local models (like llama3.2) can occasionally add extra content beyond what's requested — mitigated with strict prompting, but not 100% guaranteed.
 
+   ## Demo
+
+   ![Demo](screenshots/demo.png)
+   
 ## Project structure

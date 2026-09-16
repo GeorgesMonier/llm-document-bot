@@ -5,3 +5,5 @@ __pycache__/
 data/*.pdf
 data/*.docx
 !data/ejemplo.txt
+venv/
+!data/ejemplo.txt
