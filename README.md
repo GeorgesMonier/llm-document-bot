@@ -64,8 +64,16 @@ pytest tests/ -v
 - Q&A retrieval for long documents uses simple keyword matching rather than semantic search. A natural next step would be embeddings + a vector store (e.g. ChromaDB) for true RAG-based retrieval.
 - Small local models (like llama3.2) can occasionally add extra content beyond what's requested — mitigated with strict prompting, but not 100% guaranteed.
 
-   ## Demo
+The functionality demonstrated in this section is presented exclusively through the screenshots provided below.
 
-   ![Demo](screenshots/demo.png)
-   
 ## Project structure
+document-bot-spark/
+├── data/ # Input documents
+├── src/
+│ ├── extraction.py # Text extraction (PDF, DOCX, TXT)
+│ ├── summarizer.py # Summarization + chunking for long texts
+│ ├── qa.py # Question answering
+│ └── text_utils.py # Text chunking utility
+├── tests/ # Unit tests
+├── main.py # Entry point: Spark batch processing + interactive Q&A
+└── requirements.txt
